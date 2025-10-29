@@ -2,6 +2,64 @@
 
 using namespace std;
 
+double roundDouble( double x, int n ) {
+    stringstream ss;
+    ss << scientific << setprecision( n - 1 ) << x;
+    return stod( ss.str() );
+}
+
+void calcFreq() {
+    double c = 3e8, h = 6.63e-34;
+    double freq = roundDouble(rand() % 1000 * 1000000000000, 3);
+    double lambda = roundDouble(c / freq, 3);
+    double energy = roundDouble(h * freq, 3);
+    int whichone = rand() % 6;
+    double ans;
+    string cont;
+    if (whichone == 0) {
+        cout << "A ray of light has frequency " << freq << " Hz\nFind its wavelength\n";
+        cin >> ans;
+        if (ans == lambda) cout << "Correct!\n";
+        else cout << "Wrong! The answer is " << lambda << '\n';
+        cin >> cont;
+    }
+    else if (whichone == 1) {
+        cout << "A ray of light has wavelength " << lambda << " m\nFind its frequency\n";
+        cin >> ans;
+        if (ans == freq) cout << "Correct!\n";
+        else cout << "Wrong! The answer is " << freq << '\n';
+        cin >> cont;
+    }
+    else if (whichone == 2) {
+        cout << "A ray of light has energy " << energy << " J\nFind its frequency\n";
+        cin >> ans;
+        if (ans == freq) cout << "Correct!\n";
+        else cout << "Wrong! The answer is " << freq << '\n';
+        cin >> cont;
+    }
+    else if (whichone == 3) {
+        cout << "A ray of light has frequency " << freq << " Hz\nFind its energy\n";
+        cin >> ans;
+        if (ans == energy) cout << "Correct!\n";
+        else cout << "Wrong! The answer is " << energy << '\n';
+        cin >> cont;
+    }
+    else if (whichone == 4) {
+        cout << "A ray of light has energy " << energy << " J\nFind its wavelength\n";
+        cin >> ans;
+        if (ans == lambda) cout << "Correct!\n";
+        else cout << "Wrong! The answer is " << lambda << '\n';
+        cin >> cont;
+    }
+    else {
+        cout << "A ray of light has wavelength " << lambda << " m\nFind its energy\n";
+        cin >> ans;
+        if (ans == energy) cout << "Correct!\n";
+        else cout << "Wrong! The answer is " << energy << '\n';
+        cin >> cont;
+    }
+}
+
 void calcAr() {
     double p = rand() % 100 / 100.0;
     double mass1 = rand() % 100, mass2 = rand() % 100;
@@ -19,8 +77,8 @@ void calcAr() {
     else {
         cout << "The relative atomic mass of an element is " << ar << " and its two isotopes have mass number " << mass1 << " and " << mass2 << "\nFind the percent abundance of the first isotope\n";
         cin >> ans;
-        if (ans == p * 100) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << p * 100 << '%\n';
+        if (ans == p) cout << "Correct!\n";
+        else cout << "Wrong! The answer is " << p << '\n';
         cin >> cont;
     }
 }
@@ -80,7 +138,11 @@ const vector<pair<string, string>> cueCards = {
     {"What is the difference between kinetic energy, temperature, and heat?", "Kinetic energy is energy relating to movement.\nTemperature is the average kinetic energy.\nHeat is the amount of thermal energy a substance is transferring to its environment"},
     {"What is the difference between Kelvin and Celsius?", "Kelvin and Celsius follow the same scale, but Kelvin is 273 degrees higher (to get to Kelvin from Celcius, add 273)"},
     {"What are the relative masses of the proton, neutron, and electron?", "1, 1, and 1/2000"},
-    {"What is the difference between relative atomic mass and mass number?", "Mass number is the mass of one specific isotope of an element.\nRelative atomic mass is the weighted average of all isotopes of an element."}
+    {"What is the difference between relative atomic mass and mass number?", "Mass number is the mass of one specific isotope of an element.\nRelative atomic mass is the weighted average of all isotopes of an element."},
+    {"What happens when you change the number of protons in an element?", "It becomes a different element"},
+    {"What happens when you change the number of neutrons in an element?", "It becomes a different isotopes. Different isotopes have different physical properties but similar chemical properties\nUnstable isotopes can undergo radioactive decay"},
+    {"What happens when you change the number of electrons in an element?", "It becomes a different ion. Different ions have similar physical properties and different chemical properties (reactivity changes)"},
+    {"What does mass spectrometry separate ions by?", "Mass/charge ratio"}
 };
 
 void pickCueCard() {
@@ -92,7 +154,7 @@ void pickCueCard() {
     cin >> proceed;
 }
 
-const vector<void(*)()> questions = {pickCueCard, pickFiltration, pickState, calcAr};
+const vector<void(*)()> questions = {pickCueCard, pickFiltration, pickState, calcAr, calcFreq};
 
 int main() {
     srand(time(0));
