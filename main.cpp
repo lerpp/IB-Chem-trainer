@@ -3,13 +3,28 @@
 #define s second
 using namespace std;
 
-double roundDouble( double x, int n ) {
+double roundDouble(double x, int n) {
     stringstream ss;
-    ss << scientific << setprecision( n - 1 ) << x;
-    return stod( ss.str() );
+    ss << scientific << setprecision(n - 1) << x;
+    return stod(ss.str());
 }
 
-vector<string> periodicTable = {
+void checkAnswerD(const double &input, const double &solution) {
+    if (input == solution) cout << "Correct!\n";
+    else cout << "Wrong! The answer is " << solution << '\n';
+}
+
+void checkAnswerI(const int &input, const int &solution) {
+    if (input == solution) cout << "Correct!\n";
+    else cout << "Wrong! The answer is " << solution << '\n';
+}
+
+void checkAnswerS(const string &input, const string &solution) {
+    if (input == solution) cout << "Correct!\n";
+    else cout << "Wrong! The answer is " << solution << '\n';
+}
+
+const vector<string> periodicTable = {
     "hydrogen",
     "helium",
     "lithium",
@@ -130,9 +145,9 @@ vector<string> periodicTable = {
     "oganesson"
 };
 
-vector<pair<string, pair<int, int>>> nobleGases = {{"Og", {118, 0}}, {"Rn", {86, 0}}, {"Xe", {54, 0}}, {"Kr", {36, 0}}, {"Ar", {18, 5}}, {"Ne", {10, 3}}, {"He", {2, 1}}};
+const vector<pair<string, pair<int, int>>> nobleGases = {{"Og", {118, 0}}, {"Rn", {86, 0}}, {"Xe", {54, 0}}, {"Kr", {36, 0}}, {"Ar", {18, 5}}, {"Ne", {10, 3}}, {"He", {2, 1}}};
 
-vector<pair<string, int>> orbitals = {
+const vector<pair<string, int>> orbitals = {
     {"1s", 2},
     {"2s", 2},
     {"2p", 6},
@@ -180,8 +195,7 @@ void elecConfig() {
     if (shortened == 1) cout << "State the shortened electron configuration of " << elementName << " separated by spaces\n";
     else cout << "State the full electron configuration of " << elementName << " separated by spaces\n";
     string userin; getline(cin, userin);
-    if (userin == ans) cout << "Correct!\n";
-    else cout << "Wrong! The answer is:\n" << ans << '\n';
+    checkAnswerS(userin, ans);
 }
 
 void emissionSpectrum() {
@@ -195,8 +209,7 @@ void emissionSpectrum() {
     if (init < final) cout << "After absorbing a photon, an electron jumps from n = " << init << " to n = " << final << "\nWhat kind of electromagnetic radiation was the photon?\n";
     else cout << "An electron drops from n = " << init << " to n = " << final << " and emits a photon\nWhat kind of electromagnetic radiation is the photon?\n";
     string userin; cin >> userin;
-    if (userin == ans) cout << "Correct!\n";
-    else cout << "Wrong! The answer is " << ans << "\n";
+    checkAnswerS(userin, ans);
 }
 
 void calcFreq() {
@@ -209,38 +222,32 @@ void calcFreq() {
     if (whichone == 0) {
         cout << "A ray of light has frequency " << freq << " Hz\nFind its wavelength\n";
         cin >> ans;
-        if (ans == lambda) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << lambda << '\n';
+        checkAnswerD(ans, lambda);
     }
     else if (whichone == 1) {
         cout << "A ray of light has wavelength " << lambda << " m\nFind its frequency\n";
         cin >> ans;
-        if (ans == freq) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << freq << '\n';
+        checkAnswerD(ans, freq);
     }
     else if (whichone == 2) {
         cout << "A ray of light has energy " << energy << " J\nFind its frequency\n";
         cin >> ans;
-        if (ans == freq) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << freq << '\n';
+        checkAnswerD(ans, freq);
     }
     else if (whichone == 3) {
         cout << "A ray of light has frequency " << freq << " Hz\nFind its energy\n";
         cin >> ans;
-        if (ans == energy) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << energy << '\n';
+        checkAnswerD(ans, energy);
     }
     else if (whichone == 4) {
         cout << "A ray of light has energy " << energy << " J\nFind its wavelength\n";
         cin >> ans;
-        if (ans == lambda) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << lambda << '\n';
+        checkAnswerD(ans, lambda);
     }
     else {
         cout << "A ray of light has wavelength " << lambda << " m\nFind its energy\n";
         cin >> ans;
-        if (ans == energy) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << energy << '\n';
+        checkAnswerD(ans, energy);
     }
 }
 
@@ -253,14 +260,12 @@ void calcAr() {
     if (whichone == 0) {
         cout << p * 100 << "% of an elements isotopes have mass number " << mass1 << " and the rest have mass number " << mass2 << "\nWhat is the relative atomic mass of this element?\n";
         cin >> ans;
-        if (ans == ar) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << ar << '\n';
+        checkAnswerD(ans, ar);
     }
     else {
         cout << "The relative atomic mass of an element is " << ar << " and its two isotopes have mass number " << mass1 << " and " << mass2 << "\nFind the percent abundance of the first isotope\n";
         cin >> ans;
-        if (ans == p) cout << "Correct!\n";
-        else cout << "Wrong! The answer is " << p << '\n';
+        checkAnswerD(ans, p);
     }
 }
 
@@ -277,8 +282,7 @@ void pickState() {
     int statechange = rand() % 6;
     cout << "What is the name of the change in state from " << states[statechange].first.first << " to " << states[statechange].first.second << "?\n";
     string ans; cin >> ans;
-    if (ans == states[statechange].second) cout << "Correct!\n";
-    else cout << "Wrong! The answer is " << states[statechange].second << "\n";
+    checkAnswerS(ans, states[statechange].second);
 }
 
 const vector<pair<string, vector<string>>> filtration = {
@@ -295,8 +299,7 @@ void pickFiltration() {
     if (filtration[type].first == "distillation") cout << " without losing anything";
     cout << "?\n";
     string ans; cin >> ans;
-    if (ans == filtration[type].first) cout << "Correct!\n";
-    else cout << "Wrong! The answer is " << filtration[type].first << '\n';
+    checkAnswerS(ans, filtration[type].first);
 }
 
 const vector<pair<string, string>> cueCards = {
@@ -340,7 +343,7 @@ int main() {
     while(true) {
         int activity = rand() % questions.size();
         questions[activity]();
-        string cont; cin >> cont;
+        string cont; cin >> cont; getline(cin, cont);
     }
     return 0;
 }
