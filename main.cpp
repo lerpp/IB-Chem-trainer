@@ -1,11 +1,204 @@
 #include <bits/stdc++.h>
-
+#define f first
+#define s second
 using namespace std;
 
 double roundDouble( double x, int n ) {
     stringstream ss;
     ss << scientific << setprecision( n - 1 ) << x;
     return stod( ss.str() );
+}
+
+vector<string> periodicTable = {
+    "hydrogen",
+    "helium",
+    "lithium",
+    "beryllium",
+    "boron",
+    "carbon",
+    "nitrogen",
+    "oxygen",
+    "fluorine",
+    "neon",
+    "sodium",
+    "magnesium",
+    "aluminium",
+    "silicon",
+    "phosphor",
+    "sulfur",
+    "chlorine",
+    "argon",
+    "potassium",
+    "calcium",
+    "scandium",
+    "titanium",
+    "vanadium",
+    "chromium",
+    "manganese",
+    "iron",
+    "cobalt",
+    "nickel",
+    "copper",
+    "zinc",
+    "gallium",
+    "germanium",
+    "arsenic",
+    "selenium",
+    "bromine",
+    "krypton",
+    "rubidium",
+    "strontium",
+    "yttrium",
+    "zirconium",
+    "niobium",
+    "molybdenum",
+    "technetium",
+    "ruthenium",
+    "rhodium",
+    "palladium",
+    "silver",
+    "cadmium",
+    "indium",
+    "tin",
+    "antimony",
+    "tellurium",
+    "iodine",
+    "xenon",
+    "cesium",
+    "barium",
+    "lanthanum",
+    "cerium",
+    "praseodymium",
+    "neodymium",
+    "promethium",
+    "samarium",
+    "europium",
+    "gadolinium",
+    "terbium",
+    "dysprosium",
+    "holmium",
+    "erbium",
+    "thulium",
+    "ytterbium",
+    "lutetium",
+    "hafnium",
+    "tantalum",
+    "tungsten",
+    "rhenium",
+    "osmium",
+    "iridium",
+    "platinum",
+    "gold",
+    "mercury",
+    "thallium",
+    "lead",
+    "bismuth",
+    "polonium",
+    "astatine",
+    "radon",
+    "francium",
+    "radium",
+    "actinium",
+    "thorium",
+    "protactinium",
+    "uranium",
+    "neptunium",
+    "plutonium",
+    "americium",
+    "curium",
+    "berkelium",
+    "californium",
+    "einsteinium",
+    "fermium",
+    "mendelevium",
+    "nobelium",
+    "lawrencium",
+    "rutherfordium",
+    "dubnium",
+    "seaborgium",
+    "bohrium",
+    "hassium",
+    "meitnerium",
+    "darmstadtium",
+    "roentgenium",
+    "copernicium",
+    "nihonium",
+    "flerovium",
+    "moscovium",
+    "livermorium",
+    "tennessine",
+    "oganesson"
+};
+
+vector<pair<string, pair<int, int>>> nobleGases = {{"Og", {118, 0}}, {"Rn", {86, 0}}, {"Xe", {54, 0}}, {"Kr", {36, 0}}, {"Ar", {18, 5}}, {"Ne", {10, 3}}, {"He", {2, 1}}};
+
+vector<pair<string, int>> orbitals = {
+    {"1s", 2},
+    {"2s", 2},
+    {"2p", 6},
+    {"3s", 2},
+    {"3p", 6},
+    {"4s", 2},
+    {"3d", 10},
+    {"4p", 6}
+};
+
+void elecConfig() {
+    int element = rand() % 36 + 1;
+    string elementName = periodicTable[element - 1];
+    int shortened = rand() % 2;
+    int offset = 0;
+    string ans = "";
+    if (shortened == 1) {
+        for (const auto &[symbol, data] : nobleGases) {
+            if (data.f <= element) {
+                ans += '[' + symbol + "] ";
+                element -= data.f;
+                offset = data.s;
+                break;
+            }
+        }
+    }
+    for (int i = offset; i < orbitals.size(); i++) {
+        pair<string, int> orbital = orbitals[i];
+        if (element == 0) break;
+        if (element < orbital.s) {
+            ans += orbital.f + to_string(element);
+            break;
+        }
+        ans += orbital.f + to_string(orbital.s) + " ";
+        element -= orbital.s;
+    }
+    if (elementName == "chromium") {
+        if (shortened == 1) ans = "[Ar] 4s1 3d5";
+        else ans = "1s2 2s2 2p6 3s2 3p6 4s1 3d5";
+    }
+    if (elementName == "copper") {
+        if (shortened == 1) ans = "[Ar] 4s1 3d10";
+        else ans = "1s2 2s2 2p6 3s2 3p6 4s1 3d10";
+    }
+    if (shortened == 1) cout << "State the shortened electron configuration of " << elementName << " separated by spaces\n";
+    else cout << "State the full electron configuration of " << elementName << " separated by spaces\n";
+    string userin; getline(cin, userin);
+    if (userin == ans) cout << "Correct!\n";
+    else cout << "Wrong! The answer is:\n" << ans << '\n';
+    string cont; getline(cin, cont);
+}
+
+void emissionSpectrum() {
+    int init = rand() % 6 + 1;
+    int final = rand() % 6 + 1;
+    if (final == init) final++;
+    string ans = "";
+    if (init == 1 || final == 1) ans = "ultraviolet";
+    else if (init == 2 || final == 2) ans = "visible";
+    else ans = "infrared";
+    if (init < final) cout << "After absorbing a photon, an electron jumps from n = " << init << " to n = " << final << "\nWhat kind of electromagnetic radiation was the photon?\n";
+    else cout << "An electron drops from n = " << init << " to n = " << final << " and emits a photon\nWhat kind of electromagnetic radiation is the photon?\n";
+    string userin, cont; cin >> userin;
+    if (userin == ans) cout << "Correct!\n";
+    else cout << "Wrong! The answer is " << ans << "\n";
+    cin >> cont;
 }
 
 void calcFreq() {
@@ -133,7 +326,7 @@ const vector<pair<string, string>> cueCards = {
     {"What is separation?", "Separation occurs when two substances have different densities, so they naturally separate on their own. A separatory funnel may be used to drain one substance. For example, you can separate water and oil."},
     {"What is chromatography?", "Chromatography utilises a solvent. Substances are separated based off their solubility in the solvent."},
     {"What are 2 indicators of a pure substance?", "Narrow, high melting point (higher than impure substance) and low separation in chromatography"},
-{"What is the difference between boiling and evaporation?", "Boiling occurs at boiling point and occurs throughout the liquid. Evaporation occurs only at the surface and happens at various temperatures"},
+    {"What is the difference between boiling and evaporation?", "Boiling occurs at boiling point and occurs throughout the liquid. Evaporation occurs only at the surface and happens at various temperatures"},
     {"What are the 4 parts of the Kinetic Molecular Theory?", "All matter is made up of small particles.\nThese particles have kinetic energy.\n Kinetic energy is proportional to temperature and magnitude of motion.\nCollisions between particles are elastic (no loss in kinetic energy)"},
     {"What is the difference between kinetic energy, temperature, and heat?", "Kinetic energy is energy relating to movement.\nTemperature is the average kinetic energy.\nHeat is the amount of thermal energy a substance is transferring to its environment"},
     {"What is the difference between Kelvin and Celsius?", "Kelvin and Celsius follow the same scale, but Kelvin is 273 degrees higher (to get to Kelvin from Celcius, add 273)"},
@@ -142,7 +335,8 @@ const vector<pair<string, string>> cueCards = {
     {"What happens when you change the number of protons in an element?", "It becomes a different element"},
     {"What happens when you change the number of neutrons in an element?", "It becomes a different isotopes. Different isotopes have different physical properties but similar chemical properties\nUnstable isotopes can undergo radioactive decay"},
     {"What happens when you change the number of electrons in an element?", "It becomes a different ion. Different ions have similar physical properties and different chemical properties (reactivity changes)"},
-    {"What does mass spectrometry separate ions by?", "Mass/charge ratio"}
+    {"What does mass spectrometry separate ions by?", "Mass/charge ratio"},
+    {"What is the difference between an energy level, a sublevel, and an orbital?", "An energy level contains multiple sublevels. They correpond to the shells in a Bohr diagram\nA subshell contains multiple orbitals and are classified by s, p, d, or f. Depending on their classification, they can hold 2, 6, 10, or 14 electrons\nAn orbital can hold up to 2 electrons with opposite spin"}
 };
 
 void pickCueCard() {
@@ -154,7 +348,7 @@ void pickCueCard() {
     cin >> proceed;
 }
 
-const vector<void(*)()> questions = {pickCueCard, pickFiltration, pickState, calcAr, calcFreq};
+const vector<void(*)()> questions = {pickCueCard, pickFiltration, pickState, calcAr, calcFreq, emissionSpectrum};
 
 int main() {
     srand(time(0));
