@@ -182,7 +182,6 @@ void elecConfig() {
     string userin; getline(cin, userin);
     if (userin == ans) cout << "Correct!\n";
     else cout << "Wrong! The answer is:\n" << ans << '\n';
-    string cont; getline(cin, cont);
 }
 
 void emissionSpectrum() {
@@ -195,10 +194,9 @@ void emissionSpectrum() {
     else ans = "infrared";
     if (init < final) cout << "After absorbing a photon, an electron jumps from n = " << init << " to n = " << final << "\nWhat kind of electromagnetic radiation was the photon?\n";
     else cout << "An electron drops from n = " << init << " to n = " << final << " and emits a photon\nWhat kind of electromagnetic radiation is the photon?\n";
-    string userin, cont; cin >> userin;
+    string userin; cin >> userin;
     if (userin == ans) cout << "Correct!\n";
     else cout << "Wrong! The answer is " << ans << "\n";
-    cin >> cont;
 }
 
 void calcFreq() {
@@ -208,48 +206,41 @@ void calcFreq() {
     double energy = roundDouble(h * freq, 3);
     int whichone = rand() % 6;
     double ans;
-    string cont;
     if (whichone == 0) {
         cout << "A ray of light has frequency " << freq << " Hz\nFind its wavelength\n";
         cin >> ans;
         if (ans == lambda) cout << "Correct!\n";
         else cout << "Wrong! The answer is " << lambda << '\n';
-        cin >> cont;
     }
     else if (whichone == 1) {
         cout << "A ray of light has wavelength " << lambda << " m\nFind its frequency\n";
         cin >> ans;
         if (ans == freq) cout << "Correct!\n";
         else cout << "Wrong! The answer is " << freq << '\n';
-        cin >> cont;
     }
     else if (whichone == 2) {
         cout << "A ray of light has energy " << energy << " J\nFind its frequency\n";
         cin >> ans;
         if (ans == freq) cout << "Correct!\n";
         else cout << "Wrong! The answer is " << freq << '\n';
-        cin >> cont;
     }
     else if (whichone == 3) {
         cout << "A ray of light has frequency " << freq << " Hz\nFind its energy\n";
         cin >> ans;
         if (ans == energy) cout << "Correct!\n";
         else cout << "Wrong! The answer is " << energy << '\n';
-        cin >> cont;
     }
     else if (whichone == 4) {
         cout << "A ray of light has energy " << energy << " J\nFind its wavelength\n";
         cin >> ans;
         if (ans == lambda) cout << "Correct!\n";
         else cout << "Wrong! The answer is " << lambda << '\n';
-        cin >> cont;
     }
     else {
         cout << "A ray of light has wavelength " << lambda << " m\nFind its energy\n";
         cin >> ans;
         if (ans == energy) cout << "Correct!\n";
         else cout << "Wrong! The answer is " << energy << '\n';
-        cin >> cont;
     }
 }
 
@@ -259,20 +250,17 @@ void calcAr() {
     double ar = round(p * mass1 + (1.0 - p) * mass2);
     int whichone = rand() % 2;
     double ans;
-    char cont;
     if (whichone == 0) {
         cout << p * 100 << "% of an elements isotopes have mass number " << mass1 << " and the rest have mass number " << mass2 << "\nWhat is the relative atomic mass of this element?\n";
         cin >> ans;
         if (ans == ar) cout << "Correct!\n";
         else cout << "Wrong! The answer is " << ar << '\n';
-        cin >> cont;
     }
     else {
         cout << "The relative atomic mass of an element is " << ar << " and its two isotopes have mass number " << mass1 << " and " << mass2 << "\nFind the percent abundance of the first isotope\n";
         cin >> ans;
         if (ans == p) cout << "Correct!\n";
         else cout << "Wrong! The answer is " << p << '\n';
-        cin >> cont;
     }
 }
 
@@ -291,7 +279,6 @@ void pickState() {
     string ans; cin >> ans;
     if (ans == states[statechange].second) cout << "Correct!\n";
     else cout << "Wrong! The answer is " << states[statechange].second << "\n";
-    cin >> ans;
 }
 
 const vector<pair<string, vector<string>>> filtration = {
@@ -310,7 +297,6 @@ void pickFiltration() {
     string ans; cin >> ans;
     if (ans == filtration[type].first) cout << "Correct!\n";
     else cout << "Wrong! The answer is " << filtration[type].first << '\n';
-    cin >> ans;
 }
 
 const vector<pair<string, string>> cueCards = {
@@ -326,7 +312,7 @@ const vector<pair<string, string>> cueCards = {
     {"What is separation?", "Separation occurs when two substances have different densities, so they naturally separate on their own. A separatory funnel may be used to drain one substance. For example, you can separate water and oil."},
     {"What is chromatography?", "Chromatography utilises a solvent. Substances are separated based off their solubility in the solvent."},
     {"What are 2 indicators of a pure substance?", "Narrow, high melting point (higher than impure substance) and low separation in chromatography"},
-    {"What is the difference between boiling and evaporation?", "Boiling occurs at boiling point and occurs throughout the liquid. Evaporation occurs only at the surface and happens at various temperatures"},
+{"What is the difference between boiling and evaporation?", "Boiling occurs at boiling point and occurs throughout the liquid. Evaporation occurs only at the surface and happens at various temperatures"},
     {"What are the 4 parts of the Kinetic Molecular Theory?", "All matter is made up of small particles.\nThese particles have kinetic energy.\n Kinetic energy is proportional to temperature and magnitude of motion.\nCollisions between particles are elastic (no loss in kinetic energy)"},
     {"What is the difference between kinetic energy, temperature, and heat?", "Kinetic energy is energy relating to movement.\nTemperature is the average kinetic energy.\nHeat is the amount of thermal energy a substance is transferring to its environment"},
     {"What is the difference between Kelvin and Celsius?", "Kelvin and Celsius follow the same scale, but Kelvin is 273 degrees higher (to get to Kelvin from Celcius, add 273)"},
@@ -345,7 +331,6 @@ void pickCueCard() {
     cout << cueCards[card].first << "\n";
     string proceed; cin >> proceed;
     cout << cueCards[card].second << '\n';
-    cin >> proceed;
 }
 
 const vector<void(*)()> questions = {pickCueCard, pickFiltration, pickState, calcAr, calcFreq, emissionSpectrum};
@@ -355,6 +340,7 @@ int main() {
     while(true) {
         int activity = rand() % questions.size();
         questions[activity]();
+        string cont; cin >> cont;
     }
     return 0;
 }
