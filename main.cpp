@@ -251,6 +251,35 @@ void calcFreq() {
     }
 }
 
+void calcIE() {
+    double c = 3e8, h = 6.63e-34, avogadro = 6.02e23;
+    double freq = roundDouble(rand() % 1000 * 1000000000000, 3);
+    double lambda = roundDouble(c / freq, 3);
+    double energy = roundDouble(h * freq * avogadro / 1000, 3);
+    int whichone = rand() % 4;
+    double ans;
+    if (whichone == 0) {
+        cout << "An element has first ionization energy " << energy << " kJ\nFind its frequency of convergence\n";
+        cin >> ans;
+        checkAnswerD(ans, freq);
+    }
+    else if (whichone == 1) {
+        cout << "An element has frequency of convergence " << freq << " Hz\nFind its ionization energy in kJ\n";
+        cin >> ans;
+        checkAnswerD(ans, energy);
+    }
+    else if (whichone == 2) {
+        cout << "An element has first ionization energy " << energy << " kJ\nFind the wavelength required to ionize\n";
+        cin >> ans;
+        checkAnswerD(ans, lambda);
+    }
+    else {
+        cout << "An element requires light with wavelength " << lambda << " m to ionize.\nFind its ionization energy in kJ\n";
+        cin >> ans;
+        checkAnswerD(ans, energy);
+    }
+}
+
 void calcAr() {
     double p = rand() % 100 / 100.0;
     double mass1 = rand() % 100, mass2 = rand() % 100;
@@ -315,7 +344,7 @@ const vector<pair<string, string>> cueCards = {
     {"What is separation?", "Separation occurs when two substances have different densities, so they naturally separate on their own. A separatory funnel may be used to drain one substance. For example, you can separate water and oil."},
     {"What is chromatography?", "Chromatography utilises a solvent. Substances are separated based off their solubility in the solvent."},
     {"What are 2 indicators of a pure substance?", "Narrow, high melting point (higher than impure substance) and low separation in chromatography"},
-{"What is the difference between boiling and evaporation?", "Boiling occurs at boiling point and occurs throughout the liquid. Evaporation occurs only at the surface and happens at various temperatures"},
+    {"What is the difference between boiling and evaporation?", "Boiling occurs at boiling point and occurs throughout the liquid. Evaporation occurs only at the surface and happens at various temperatures"},
     {"What are the 4 parts of the Kinetic Molecular Theory?", "All matter is made up of small particles.\nThese particles have kinetic energy.\n Kinetic energy is proportional to temperature and magnitude of motion.\nCollisions between particles are elastic (no loss in kinetic energy)"},
     {"What is the difference between kinetic energy, temperature, and heat?", "Kinetic energy is energy relating to movement.\nTemperature is the average kinetic energy.\nHeat is the amount of thermal energy a substance is transferring to its environment"},
     {"What is the difference between Kelvin and Celsius?", "Kelvin and Celsius follow the same scale, but Kelvin is 273 degrees higher (to get to Kelvin from Celcius, add 273)"},
@@ -325,7 +354,12 @@ const vector<pair<string, string>> cueCards = {
     {"What happens when you change the number of neutrons in an element?", "It becomes a different isotopes. Different isotopes have different physical properties but similar chemical properties\nUnstable isotopes can undergo radioactive decay"},
     {"What happens when you change the number of electrons in an element?", "It becomes a different ion. Different ions have similar physical properties and different chemical properties (reactivity changes)"},
     {"What does mass spectrometry separate ions by?", "Mass/charge ratio"},
-    {"What is the difference between an energy level, a sublevel, and an orbital?", "An energy level contains multiple sublevels. They correpond to the shells in a Bohr diagram\nA subshell contains multiple orbitals and are classified by s, p, d, or f. Depending on their classification, they can hold 2, 6, 10, or 14 electrons\nAn orbital can hold up to 2 electrons with opposite spin"}
+    {"What is the difference between an energy level, a sublevel, and an orbital?", "An energy level contains multiple sublevels. They correpond to the shells in a Bohr diagram\nA subshell contains multiple orbitals and are classified by s, p, d, or f. Depending on their classification, they can hold 2, 6, 10, or 14 electrons\nAn orbital can hold up to 2 electrons with opposite spin"},
+    {"What is an atoms ground state?", "Arrangement of electrons with the lowest energy"},
+    {"What is an atoms excited state?", "Any electron configuration other than the ground state"},
+    {"What is ionization energy?", "The amount of energy it takes to ionize an electron (bring it to energy level infinity where it leaves the atom)\nAtoms are exposed to specific wavelengths of light which excite the electrons away from the atom"},
+    {"What are some factors that can affect ionization energy?", "Atoms with more energy levels have lower ionization energies because the electrons are further from the nucleus and experience less electrostatic attraction\nAtoms with more protons have higher ionization energies because there is more positive charge to attract the electrons"},
+    {"How does ionization energy change across groups and periods?", "IE drops sharpy when moving to a new period (new energy level, less attraction)\nIE increases gradually across a period (more protons, stronger attraction)\nIE jumps down from half filled/fully filled sublevel (stable configuration, easy to reach)"}
 };
 
 void pickCueCard() {
@@ -336,14 +370,14 @@ void pickCueCard() {
     cout << cueCards[card].second << '\n';
 }
 
-const vector<void(*)()> questions = {pickCueCard, pickFiltration, pickState, calcAr, calcFreq, emissionSpectrum};
+const vector<void(*)()> questions = {pickCueCard, pickFiltration, pickState, calcAr, calcFreq, emissionSpectrum, calcIE};
 
 int main() {
     srand(time(0));
     while(true) {
         int activity = rand() % questions.size();
         questions[activity]();
-        string cont; cin >> cont; getline(cin, cont);
+        string cont; getline(cin >> ws, cont);
     }
     return 0;
 }
