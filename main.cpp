@@ -280,6 +280,29 @@ void calcIE() {
     }
 }
 
+void calcMolMass(){
+    double n = roundDouble(rand() % 1000 / 100.0, 3);
+    double M = roundDouble(rand() % 1000 / 10.0, 3);
+    double m = roundDouble(n * M, 3);
+    int whichone = rand() % 3;
+    double ans;
+    if (whichone == 0) {
+        cout << "Bob has " << n << " moles of an element with molar mass " << M << " grams per mole. Find the mass of the sample of the element\n";
+        cin >> ans;
+        checkAnswerD(ans, m);
+    }
+    else if (whichone == 1) {
+        cout << "Bob has " << m << " grams of an element with molar mass " << M << " grams per mole. Find the number of moles present\n";
+        cin >> ans;
+        checkAnswerD(ans, n);
+    }
+    else {
+        cout << "Bob has " << n << " moles of an element which weighs " << m << " grams. Find the molar mass of the element\n";
+        cin >> ans;
+        checkAnswerD(ans, M);
+    }
+}
+
 void calcAr() {
     double p = rand() % 100 / 100.0;
     double mass1 = rand() % 100, mass2 = rand() % 100;
@@ -359,7 +382,8 @@ const vector<pair<string, string>> cueCards = {
     {"What is an atoms excited state?", "Any electron configuration other than the ground state"},
     {"What is ionization energy?", "The amount of energy it takes to ionize an electron (bring it to energy level infinity where it leaves the atom)\nAtoms are exposed to specific wavelengths of light which excite the electrons away from the atom"},
     {"What are some factors that can affect ionization energy?", "Atoms with more energy levels have lower ionization energies because the electrons are further from the nucleus and experience less electrostatic attraction\nAtoms with more protons have higher ionization energies because there is more positive charge to attract the electrons"},
-    {"How does ionization energy change across groups and periods?", "IE drops sharpy when moving to a new period (new energy level, less attraction)\nIE increases gradually across a period (more protons, stronger attraction)\nIE jumps down from half filled/fully filled sublevel (stable configuration, easy to reach)"}
+    {"How does ionization energy change across groups and periods?", "IE drops sharpy when moving to a new period (new energy level, less attraction)\nIE increases gradually across a period (more protons, stronger attraction)\nIE jumps down from half filled/fully filled sublevel (stable configuration, easy to reach)"},
+    {"How does ionization energy change as you remove more and more electrons?", "It strictly increases. There are less electrons for the protons to attract so they experience stronger attraction and require more energy to overcome electrostatic attraction"}
 };
 
 void pickCueCard() {
