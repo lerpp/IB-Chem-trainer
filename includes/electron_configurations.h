@@ -1,0 +1,10 @@
+//
+// Created by allen on 11/4/2025.
+//
+
+#ifndef IB_CHEM_TOOL_ELECTRON_CONFIGURATIONS_H
+#define IB_CHEM_TOOL_ELECTRON_CONFIGURATIONS_H
+
+void elecConfig();
+
+#endif //IB_CHEM_TOOL_ELECTRON_CONFIGURATIONS_H

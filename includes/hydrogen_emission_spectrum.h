@@ -1,0 +1,10 @@
+//
+// Created by allen on 11/4/2025.
+//
+
+#ifndef IB_CHEM_TOOL_HYDROGEN_EMISSION_SPECTRUM_H
+#define IB_CHEM_TOOL_HYDROGEN_EMISSION_SPECTRUM_H
+
+void emissionSpectrum();
+
+#endif //IB_CHEM_TOOL_HYDROGEN_EMISSION_SPECTRUM_H
