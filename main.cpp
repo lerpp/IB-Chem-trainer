@@ -11,6 +11,7 @@
 #include "includes/frequency_wavelength.h"
 #include "includes/hydrogen_emission_spectrum.h"
 #include "includes/electron_configurations.h"
+#include "includes/comps_molmass.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -23,7 +24,8 @@ const vector questions = {
     calcFreq,
     emissionSpectrum,
     calcIE,
-    elecConfig
+    elecConfig,
+    find_comp_molmass
 };
 
 int main() {
