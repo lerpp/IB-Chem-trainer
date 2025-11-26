@@ -12,6 +12,7 @@
 #include "includes/hydrogen_emission_spectrum.h"
 #include "includes/electron_configurations.h"
 #include "includes/comps_molmass.h"
+#include "includes/percent_composition.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -25,7 +26,8 @@ const vector questions = {
     emissionSpectrum,
     calcIE,
     elecConfig,
-    find_comp_molmass
+    find_comp_molmass,
+    percent_comp
 };
 
 int main() {
