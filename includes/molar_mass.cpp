@@ -1,8 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 #include "molar_mass.h"
 #include "input_handling.h"
 
-using namespace std;
+using std::cin, std::cout, std::string;
 
 void calcMolMass(){
     double n = roundDouble(rand() % 1000 / 100.0, 3);
