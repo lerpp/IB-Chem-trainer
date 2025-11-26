@@ -7,7 +7,7 @@
 using std::cin, std::cout, std::string, std::vector, std::pair;
 
 vector<pair<pair<string, string>, double>> compounds_molmass = {
-    {{"water", "H2)"}, 18.02},
+    {{"water", "H20"}, 18.02},
     {{"carbon dioxide", "CO2"}, 44.01},
     {{"methane", "CH4",}, 16.05},
     {{"ammonia", "NH3"}, 17.04},
