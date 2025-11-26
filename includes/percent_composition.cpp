@@ -7,7 +7,7 @@
 using std::cin, std::cout, std::string, std::vector, std::pair;
 
 vector<pair<pair<string, string>, vector<pair<string, double>>>> compounds_percent_comp = {
-    {{"water", "H2)"}, {
+    {{"water", "H20"}, {
         {"H", 11.21},
         {"O", 88.78}
     }},
