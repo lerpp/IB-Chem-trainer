@@ -1,8 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 #include "frequency_wavelength.h"
 #include "input_handling.h"
 
-using namespace std;
+using std::cin, std::cout, std::string;
 
 void calcFreq() {
     double c = 3e8, h = 6.63e-34;
