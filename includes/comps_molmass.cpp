@@ -6,7 +6,7 @@
 
 using std::cin, std::cout, std::string, std::vector, std::pair;
 
-vector<pair<pair<string, string>, double>> compounds = {
+vector<pair<pair<string, string>, double>> compounds_molmass = {
     {{"water", "H2)"}, 18.02},
     {{"carbon dioxide", "CO2"}, 44.01},
     {{"methane", "CH4",}, 16.05},
@@ -25,7 +25,7 @@ vector<pair<pair<string, string>, double>> compounds = {
 };
 
 void find_comp_molmass() {
-    auto compound = compounds[rand() % compounds.size()];
+    auto compound = compounds_molmass[rand() % compounds_molmass.size()];
     auto [name, formula] = compound.first;
     double molmass = compound.second;
     cout << "What is the molar mass of " << name << "? (" << formula << ")\n";
