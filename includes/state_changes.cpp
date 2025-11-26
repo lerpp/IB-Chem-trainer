@@ -1,11 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <vector>
 #include "state_changes.h"
 #include "input_handling.h"
 
 #define f first
 #define s second
 
-using namespace std;
+using std::cin, std::cout, std::string, std::vector, std::pair;
 
 const vector<pair<pair<string, string>, string>> states  = {
     {{"solid", "liquid"}, "melting"},
