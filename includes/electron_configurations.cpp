@@ -1,11 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
 #include "electron_configurations.h"
 #include "input_handling.h"
 
 #define f first
 #define s second
 
-using namespace std;
+using std::cin, std::cout, std::string, std::vector, std::pair, std::to_string;
 
 const vector<string> periodicTable = {
     "hydrogen",
@@ -22,7 +24,7 @@ const vector<string> periodicTable = {
     "magnesium",
     "aluminium",
     "silicon",
-    "phosphor",
+    "phosphorus",
     "sulfur",
     "chlorine",
     "argon",
@@ -150,7 +152,7 @@ void elecConfig() {
     if (shortened == 1) {
         for (const auto &[symbol, data] : nobleGases) {
             if (data.f <= element) {
-                ans += '[' + symbol + "] ";
+                ans += '[' + symbol + "]";
                 element -= data.f;
                 offset = data.s;
                 break;
@@ -161,10 +163,12 @@ void elecConfig() {
         pair<string, int> orbital = orbitals[i];
         if (element == 0) break;
         if (element < orbital.s) {
+            if (ans != "") ans += " ";
             ans += orbital.f + to_string(element);
             break;
         }
-        ans += orbital.f + to_string(orbital.s) + " ";
+        if (ans != "") ans += " ";
+        ans += orbital.f + to_string(orbital.s);
         element -= orbital.s;
     }
     if (elementName == "chromium") {
