@@ -1,7 +1,11 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <sstream>
 #include "input_handling.h"
 
-using namespace std;
+#include <iomanip>
+
+using std::cin, std::cout, std::string, std::setprecision, std::stringstream, std::scientific, std::ostringstream;
 
 double roundDouble( double x, int n ) {
     stringstream ss;
