@@ -25,4 +25,6 @@ add_executable(ib_chem_tool main.cpp
         includes/electron_configurations.cpp
         includes/electron_configurations.h
         includes/continue.cpp
-        includes/continue.h)
+        includes/continue.h
+        includes/comps_molmass.cpp
+        includes/comps_molmass.h)
