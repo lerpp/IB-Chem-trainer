@@ -1,8 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 #include "ionization_energy.h"
 #include "input_handling.h"
 
-using namespace std;
+using std::cin, std::cout, std::string;
 
 void calcIE() {
     double c = 3e8, h = 6.63e-34, avogadro = 6.02e23;
