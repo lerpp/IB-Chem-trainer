@@ -1,8 +1,10 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <cmath>
 #include "relative_atomic_mass.h"
 #include "input_handling.h"
 
-using namespace std;
+using std::cin, std::cout, std::string;
 
 void calcAr() {
     double p = rand() % 100 / 100.0;
