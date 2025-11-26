@@ -45,6 +45,21 @@ vector<pair<pair<string, string>, vector<pair<string, double>>>> compounds_perce
         {"S", 50.04},
         {"O", 49.96}
     }},
+    {{"sulfuric acid", "H2SO4"}, {
+        {"S", 32.7},
+        {"O", 65.24},
+        {"H", 2.06}
+    }},
+    {{"calcium carbonate", "CaCO3"}, {
+        {"Ca", 40.04},
+        {"C", 12.0},
+        {"O", 47.96}
+    }},
+    {{"ammonium nitrate", "NH4NO3"}, {
+        {"N", 35.0},
+        {"H", 5.05},
+        {"O", 59.95}
+    }},
     {{"ethane", "C2H6"}, {
         {"C", 79.85},
         {"H", 20.15}
@@ -67,6 +82,10 @@ vector<pair<pair<string, string>, vector<pair<string, double>>>> compounds_perce
     {{"propane", "C3H8"}, {
         {"C", 81.68},
         {"H", 18.32}
+    }},
+    {{"benzene", "C6H6"}, {
+        {"C", 92.22},
+        {"H", 7.78}
     }}
 };
 
