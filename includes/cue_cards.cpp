@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include "cue_cards.h"
+#include "continue.h"
 
 using std::cin, std::cout, std::string, std::vector, std::pair;
 
@@ -41,6 +42,6 @@ void pickCueCard() {
     cout << "Cue Card\n";
     int card = rand() % cueCards.size();
     cout << cueCards[card].first << "\n";
-    string proceed; cin >> proceed;
+    next();
     cout << cueCards[card].second << '\n';
 }
