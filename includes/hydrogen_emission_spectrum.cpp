@@ -1,8 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 #include "hydrogen_emission_spectrum.h"
 #include "input_handling.h"
 
-using namespace std;
+using std::cin, std::cout, std::string;
 
 void emissionSpectrum() {
     int init = rand() % 6 + 1;
