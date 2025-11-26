@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
 #include "includes/cue_cards.h"
 #include "includes/filtration_types.h"
 #include "includes/state_changes.h"
@@ -9,7 +11,7 @@
 #include "includes/hydrogen_emission_spectrum.h"
 #include "includes/electron_configurations.h"
 
-using namespace std;
+using std::vector, std::cin, std::getline, std::ws, std::string;
 
 const vector questions = {
     pickCueCard,
