@@ -1,11 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <vector>
 #include "filtration_types.h"
 #include "input_handling.h"
 
 #define f first
 #define s second
 
-using namespace std;
+using std::cin, std::cout, std::vector, std::pair, std::string;
 
 const vector<pair<string, vector<string>>> filtration = {
     {"filtration", {"water and sand", "water and wood pulp", "ethanol and sand", "mud and water", "tea and tea leaves", "iron filings and sand in water", "rice and water"}},
