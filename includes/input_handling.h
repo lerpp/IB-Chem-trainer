@@ -1,7 +1,8 @@
-#ifndef IB_TOOLS_INPUT_HANDLING_H
-#define IB_TOOLS_INPUT_HANDLING_H
+#ifndef IB_CHEM_TOOL_INPUT_HANDLING_H
+#define IB_CHEM_TOOL_INPUT_HANDLING_H
+
 #include <string>
-using namespace std;
+using std::string;
 
 double roundDouble(double x, int n);
 
@@ -11,4 +12,4 @@ void checkAnswerS(const string &input, const string &solution);
 
 string doubleToString(double value);
 
-#endif IB_TOOLS_INPUT_HANDLING_H
+#endif
