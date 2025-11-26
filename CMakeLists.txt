@@ -27,4 +27,6 @@ add_executable(ib_chem_tool main.cpp
         includes/continue.cpp
         includes/continue.h
         includes/comps_molmass.cpp
-        includes/comps_molmass.h)
+        includes/comps_molmass.h
+        includes/percent_composition.cpp
+        includes/percent_composition.h)
