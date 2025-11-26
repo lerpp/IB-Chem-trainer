@@ -1,15 +1,17 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
 #include "cue_cards.h"
 
-using namespace std;
+using std::cin, std::cout, std::string, std::vector, std::pair;
 
 const vector<pair<string, string>> cueCards = {
     {"What is a pure substance?", "A pure substance contains only one type of particle. These particles can be molecules or atoms. For example, oxygen and water are both pure substances."},
     {"What is a mixture?", "A mixture contains more than one pure substance mixed together. Examples of mixtures include salt water and steel"},
     {"What is an element?", "An element is a substance containing only one kind of atom. Examples of elements include gold and hydrogen."},
     {"What is a molecule?", "A molecule is a particle with more than one type of atom. Example of molecules include table salt and water."},
-    {"What is a homogeneous mixture?", "A homoegeneous mixture is one where you cannot tell the constituent substances apart. It has one phase (appearance). Examples of homogeneous mixtures include chocolate milk and salt water"},
-    {"What is a hetereogeneous mixture?", "A heterogeneous mixture is one where you can tell the constituent substances apart. It has more than one phase (appearance). Examples of heterogeneous mixtures include water + oil and chocolate chip cookie batter"},
+    {"What is a homogeneous mixture?", "A homogeneous mixture is one where you cannot tell the constituent substances apart. It has one phase (appearance). Examples of homogeneous mixtures include chocolate milk and salt water"},
+    {"What is a heterogeneous mixture?", "A heterogeneous mixture is one where you can tell the constituent substances apart. It has more than one phase (appearance). Examples of heterogeneous mixtures include water + oil and chocolate chip cookie batter"},
     {"What is filtration?", "Filtration is separation of a heterogeneous mixture (solid & liquid) by filtering particles by size, weight, etc. For example, you can filter sand and water"},
     {"What is evaporation?", "Evaporation is heating up a liquid until it evaporates, leaving behind residue. For example, you can get salt from saltwater by evaporating the water."},
     {"What is distillation?", "Distillation is heating up a liquid until it evaporates, leaving behind residue, and condensing the evaporated liquid. For example, you can separate water and salt through distillation."},
@@ -26,7 +28,7 @@ const vector<pair<string, string>> cueCards = {
     {"What happens when you change the number of neutrons in an element?", "It becomes a different isotopes. Different isotopes have different physical properties but similar chemical properties\nUnstable isotopes can undergo radioactive decay"},
     {"What happens when you change the number of electrons in an element?", "It becomes a different ion. Different ions have similar physical properties and different chemical properties (reactivity changes)"},
     {"What does mass spectrometry separate ions by?", "Mass/charge ratio"},
-    {"What is the difference between an energy level, a sublevel, and an orbital?", "An energy level contains multiple sublevels. They correpond to the shells in a Bohr diagram\nA subshell contains multiple orbitals and are classified by s, p, d, or f. Depending on their classification, they can hold 2, 6, 10, or 14 electrons\nAn orbital can hold up to 2 electrons with opposite spin"},
+    {"What is the difference between an energy level, a sublevel, and an orbital?", "An energy level contains multiple sublevels. They correspond to the shells in a Bohr diagram\nA subshell contains multiple orbitals and are classified by s, p, d, or f. Depending on their classification, they can hold 2, 6, 10, or 14 electrons\nAn orbital can hold up to 2 electrons with opposite spin"},
     {"What is an atoms ground state?", "Arrangement of electrons with the lowest energy"},
     {"What is an atoms excited state?", "Any electron configuration other than the ground state"},
     {"What is ionization energy?", "The amount of energy it takes to ionize an electron (bring it to energy level infinity where it leaves the atom)\nAtoms are exposed to specific wavelengths of light which excite the electrons away from the atom"},
