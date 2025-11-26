@@ -23,4 +23,6 @@ add_executable(ib_chem_tool main.cpp
         includes/hydrogen_emission_spectrum.cpp
         includes/hydrogen_emission_spectrum.h
         includes/electron_configurations.cpp
-        includes/electron_configurations.h)
+        includes/electron_configurations.h
+        includes/continue.cpp
+        includes/continue.h)
