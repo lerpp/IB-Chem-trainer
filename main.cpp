@@ -13,6 +13,7 @@
 #include "includes/electron_configurations.h"
 #include "includes/comps_molmass.h"
 #include "includes/percent_composition.h"
+#include "includes/emp_formula.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -27,15 +28,17 @@ const vector questions = {
     calcIE,
     elecConfig,
     find_comp_molmass,
-    percent_comp
+    percent_comp,
+    emp_formula
 };
 
 int main() {
     srand(time(0));
-    while(true) {
+    while(false) {
         int activity = rand() % questions.size();
         questions[activity]();
         next();
     }
+    emp_formula();
     return 0;
 }
