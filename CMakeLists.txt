@@ -31,4 +31,6 @@ add_executable(ib_chem_tool main.cpp
         includes/percent_composition.cpp
         includes/percent_composition.h
         includes/emp_formula.cpp
-        includes/emp_formula.h)
+        includes/emp_formula.h
+        includes/molecular_formula.cpp
+        includes/molecular_formula.h)
