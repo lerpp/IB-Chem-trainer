@@ -14,6 +14,7 @@
 #include "includes/comps_molmass.h"
 #include "includes/percent_composition.h"
 #include "includes/emp_formula.h"
+#include "includes/molecular_formula.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -29,7 +30,8 @@ const vector questions = {
     elecConfig,
     find_comp_molmass,
     percent_comp,
-    emp_formula
+    emp_formula,
+    mol_formula
 };
 
 int main() {
