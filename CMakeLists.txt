@@ -35,4 +35,6 @@ add_executable(ib_chem_tool main.cpp
         includes/molecular_formula.cpp
         includes/molecular_formula.h
         includes/hydrates.cpp
-        includes/hydrates.h)
+        includes/hydrates.h
+        includes/concentration.cpp
+        includes/concentration.h)
