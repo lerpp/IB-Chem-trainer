@@ -35,7 +35,8 @@ const vector<pair<string, string>> cueCards = {
     {"What is ionization energy?", "The amount of energy it takes to ionize an electron (bring it to energy level infinity where it leaves the atom)\nAtoms are exposed to specific wavelengths of light which excite the electrons away from the atom"},
     {"What are some factors that can affect ionization energy?", "Atoms with more energy levels have lower ionization energies because the electrons are further from the nucleus and experience less electrostatic attraction\nAtoms with more protons have higher ionization energies because there is more positive charge to attract the electrons"},
     {"How does ionization energy change across groups and periods?", "IE drops sharpy when moving to a new period (new energy level, less attraction)\nIE increases gradually across a period (more protons, stronger attraction)\nIE jumps down from half filled/fully filled sublevel (stable configuration, easy to reach)"},
-    {"How does ionization energy change as you remove more and more electrons?", "It strictly increases. There are less electrons for the protons to attract so they experience stronger attraction and require more energy to overcome electrostatic attraction"}
+    {"How does ionization energy change as you remove more and more electrons?", "It strictly increases. There are less electrons for the protons to attract so they experience stronger attraction and require more energy to overcome electrostatic attraction"},
+    {"Distinguish between the following terms:\nStandard solution\nStandardization of a solution\nStock solution\nSerial dilution", "Standard solution - a soution with an accurate, known percentage\nStandardization - process of testing to make sure a solution has accurate and precise concentration\nStock solution - a highly concentrated solution which is diluted before use\nSerial dilution - process of diluting a concentrated solution across several steps"}
 };
 
 void pickCueCard() {
