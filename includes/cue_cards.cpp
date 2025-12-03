@@ -22,7 +22,7 @@ const vector<pair<string, string>> cueCards = {
     {"What is the difference between boiling and evaporation?", "Boiling occurs at boiling point and occurs throughout the liquid. Evaporation occurs only at the surface and happens at various temperatures"},
     {"What are the 4 parts of the Kinetic Molecular Theory?", "All matter is made up of small particles.\nThese particles have kinetic energy.\n Kinetic energy is proportional to temperature and magnitude of motion.\nCollisions between particles are elastic (no loss in kinetic energy)"},
     {"What is the difference between kinetic energy, temperature, and heat?", "Kinetic energy is energy relating to movement.\nTemperature is the average kinetic energy.\nHeat is the amount of thermal energy a substance is transferring to its environment"},
-    {"What is the difference between Kelvin and Celsius?", "Kelvin and Celsius follow the same scale, but Kelvin is 273 degrees higher (to get to Kelvin from Celcius, add 273)"},
+    {"What is the difference between Kelvin and Celsius?", "Kelvin and Celsius follow the same scale, but Kelvin is 273 degrees higher (to get to Kelvin from Celsius, add 273)"},
     {"What are the relative masses of the proton, neutron, and electron?", "1, 1, and 1/2000"},
     {"What is the difference between relative atomic mass and mass number?", "Mass number is the mass of one specific isotope of an element.\nRelative atomic mass is the weighted average of all isotopes of an element."},
     {"What happens when you change the number of protons in an element?", "It becomes a different element"},
