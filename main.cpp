@@ -16,6 +16,7 @@
 #include "includes/emp_formula.h"
 #include "includes/molecular_formula.h"
 #include "includes/hydrates.h"
+#include "includes/concentration.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -33,7 +34,9 @@ const vector questions = {
     percent_comp,
     emp_formula,
     mol_formula,
-    find_hydrate
+    find_hydrate,
+    cnv,
+    cvcv
 };
 
 int main() {
