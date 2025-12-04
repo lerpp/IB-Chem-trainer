@@ -17,6 +17,7 @@
 #include "includes/molecular_formula.h"
 #include "includes/hydrates.h"
 #include "includes/concentration.h"
+#include "includes/ideal_gases.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -36,7 +37,9 @@ const vector questions = {
     mol_formula,
     find_hydrate,
     cnv,
-    cvcv
+    cvcv,
+    comb_gas_law,
+    ideal_gas_law
 };
 
 int main() {
