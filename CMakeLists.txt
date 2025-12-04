@@ -37,4 +37,6 @@ add_executable(ib_chem_tool main.cpp
         includes/hydrates.cpp
         includes/hydrates.h
         includes/concentration.cpp
-        includes/concentration.h)
+        includes/concentration.h
+        includes/ideal_gases.cpp
+        includes/ideal_gases.h)
