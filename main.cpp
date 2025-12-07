@@ -18,6 +18,7 @@
 #include "includes/hydrates.h"
 #include "includes/concentration.h"
 #include "includes/ideal_gases.h"
+#include "includes/lewis_diagram.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -39,7 +40,8 @@ const vector questions = {
     cnv,
     cvcv,
     comb_gas_law,
-    ideal_gas_law
+    ideal_gas_law,
+    draw_lewis
 };
 
 int main() {
