@@ -39,4 +39,6 @@ add_executable(ib_chem_tool main.cpp
         includes/concentration.cpp
         includes/concentration.h
         includes/ideal_gases.cpp
-        includes/ideal_gases.h)
+        includes/ideal_gases.h
+        includes/lewis_diagram.cpp
+        includes/lewis_diagram.h)
