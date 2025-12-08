@@ -19,6 +19,7 @@
 #include "includes/concentration.h"
 #include "includes/ideal_gases.h"
 #include "includes/lewis_diagram.h"
+#include "includes/vsepr.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -41,7 +42,8 @@ const vector questions = {
     cvcv,
     comb_gas_law,
     ideal_gas_law,
-    draw_lewis
+    draw_lewis,
+    find_vsepr
 };
 
 int main() {
