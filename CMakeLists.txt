@@ -41,4 +41,6 @@ add_executable(ib_chem_tool main.cpp
         includes/ideal_gases.cpp
         includes/ideal_gases.h
         includes/lewis_diagram.cpp
-        includes/lewis_diagram.h)
+        includes/lewis_diagram.h
+        includes/vsepr.cpp
+        includes/vsepr.h)
