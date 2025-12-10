@@ -20,6 +20,7 @@
 #include "includes/ideal_gases.h"
 #include "includes/lewis_diagram.h"
 #include "includes/vsepr.h"
+#include "includes/intermol_forces.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -43,7 +44,9 @@ const vector questions = {
     comb_gas_law,
     ideal_gas_law,
     draw_lewis,
-    find_vsepr
+    find_vsepr,
+    identify_imfs,
+    compare_bp
 };
 
 int main() {
