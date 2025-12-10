@@ -43,4 +43,6 @@ add_executable(ib_chem_tool main.cpp
         includes/lewis_diagram.cpp
         includes/lewis_diagram.h
         includes/vsepr.cpp
-        includes/vsepr.h)
+        includes/vsepr.h
+        includes/intermol_forces.cpp
+        includes/intermol_forces.h)
