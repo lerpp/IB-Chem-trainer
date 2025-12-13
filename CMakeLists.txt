@@ -45,4 +45,6 @@ add_executable(ib_chem_tool main.cpp
         includes/vsepr.cpp
         includes/vsepr.h
         includes/intermol_forces.cpp
-        includes/intermol_forces.h)
+        includes/intermol_forces.h
+        includes/polymers.cpp
+        includes/polymers.h)
