@@ -21,6 +21,7 @@
 #include "includes/lewis_diagram.h"
 #include "includes/vsepr.h"
 #include "includes/intermol_forces.h"
+#include "includes/polymers.h"
 
 using std::vector, std::cin, std::getline, std::ws, std::string;
 
@@ -46,7 +47,9 @@ const vector questions = {
     draw_lewis,
     find_vsepr,
     identify_imfs,
-    compare_bp
+    compare_bp,
+    addition_polymer,
+    condensation_polymer
 };
 
 int main() {
