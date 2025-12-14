@@ -47,4 +47,6 @@ add_executable(ib_chem_tool main.cpp
         includes/intermol_forces.cpp
         includes/intermol_forces.h
         includes/polymers.cpp
-        includes/polymers.h)
+        includes/polymers.h
+        includes/change_types.cpp
+        includes/change_types.h)
