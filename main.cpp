@@ -22,6 +22,7 @@
 #include "includes/vsepr.h"
 #include "includes/intermol_forces.h"
 #include "includes/polymers.h"
+#include "includes/change_types.h"
 
 using std::vector, std::cin, std::cout, std::getline, std::ws, std::string, std::pair;
 
@@ -49,7 +50,8 @@ const vector all_questions = {
     identify_imfs,
     compare_bp,
     addition_polymer,
-    condensation_polymer
+    condensation_polymer,
+    identify_change
 };
 
 const vector structure1 = {
@@ -81,6 +83,10 @@ const vector structure2 = {
     condensation_polymer
 };
 
+const vector reactivity1 = {
+    identify_change
+};
+
 const vector cuecards = {
     pickCueCard
 };
@@ -89,6 +95,7 @@ const vector<pair<vector<void(*)()>, string>> units = {
     {cuecards, "Cue cards"},
     {structure1, "Structure 1"},
     {structure2, "Structure 2"},
+    {reactivity1, "Reactivity 1"},
     {all_questions, "Everything"}
 };
 
