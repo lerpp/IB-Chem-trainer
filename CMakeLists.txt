@@ -49,4 +49,6 @@ add_executable(ib_chem_tool main.cpp
         includes/polymers.cpp
         includes/polymers.h
         includes/change_types.cpp
-        includes/change_types.h)
+        includes/change_types.h
+        includes/heat.cpp
+        includes/heat.h)
