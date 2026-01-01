@@ -23,6 +23,7 @@
 #include "includes/intermol_forces.h"
 #include "includes/polymers.h"
 #include "includes/change_types.h"
+#include "includes/heat.h"
 
 using std::vector, std::cin, std::cout, std::getline, std::ws, std::string, std::pair;
 
@@ -51,7 +52,9 @@ const vector all_questions = {
     compare_bp,
     addition_polymer,
     condensation_polymer,
-    identify_change
+    identify_change,
+    qnct,
+    qnl
 };
 
 const vector structure1 = {
@@ -84,7 +87,9 @@ const vector structure2 = {
 };
 
 const vector reactivity1 = {
-    identify_change
+    identify_change,
+    qnct,
+    qnl
 };
 
 const vector cuecards = {
