@@ -24,6 +24,7 @@
 #include "includes/polymers.h"
 #include "includes/change_types.h"
 #include "includes/heat.h"
+#include "includes/calorimetry.h"
 
 using std::vector, std::cin, std::cout, std::getline, std::ws, std::string, std::pair;
 
@@ -54,7 +55,8 @@ const vector all_questions = {
     condensation_polymer,
     identify_change,
     qnct,
-    qnl
+    qnl,
+    calorimetry
 };
 
 const vector structure1 = {
@@ -89,7 +91,8 @@ const vector structure2 = {
 const vector reactivity1 = {
     identify_change,
     qnct,
-    qnl
+    qnl,
+    calorimetry
 };
 
 const vector cuecards = {
