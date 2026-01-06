@@ -51,4 +51,6 @@ add_executable(ib_chem_tool main.cpp
         includes/change_types.cpp
         includes/change_types.h
         includes/heat.cpp
-        includes/heat.h)
+        includes/heat.h
+        includes/calorimetry.cpp
+        includes/calorimetry.h)
