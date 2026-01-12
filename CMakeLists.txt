@@ -53,4 +53,6 @@ add_executable(ib_chem_tool main.cpp
         includes/heat.cpp
         includes/heat.h
         includes/calorimetry.cpp
-        includes/calorimetry.h)
+        includes/calorimetry.h
+        includes/hess_law.cpp
+        includes/hess_law.h)
