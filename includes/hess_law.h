@@ -6,5 +6,7 @@
 #define IB_CHEM_TOOL_HESS_LAW_H
 
 void hess_law();
+void formation_enthalpy_cycle();
+void combustion_enthalpy_cycle();
 
 #endif //IB_CHEM_TOOL_HESS_LAW_H
