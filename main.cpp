@@ -25,6 +25,7 @@
 #include "includes/change_types.h"
 #include "includes/heat.h"
 #include "includes/calorimetry.h"
+#include "includes/hess_law.h"
 
 using std::vector, std::cin, std::cout, std::getline, std::ws, std::string, std::pair;
 
@@ -56,7 +57,8 @@ const vector all_questions = {
     identify_change,
     qnct,
     qnl,
-    calorimetry
+    calorimetry,
+    hess_law
 };
 
 const vector structure1 = {
@@ -92,7 +94,8 @@ const vector reactivity1 = {
     identify_change,
     qnct,
     qnl,
-    calorimetry
+    calorimetry,
+    hess_law
 };
 
 const vector cuecards = {
