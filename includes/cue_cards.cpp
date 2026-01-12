@@ -84,7 +84,9 @@ Nanotubes  Trigonal planar  Hollow tube   Extremely hard Very good)"},
     {"In a real calorimeter, reactions don't happen instantly. After the reaction, the calorimeter may heat up or cool down at a steady rate. How can you use temperature data from a calorimeter to estimate the temperature if the reaction occurred instantly?", "Since the calorimeter heats up/cools down at a constant rate, we can extrapolate the linear relation to find the expected temperature at the time of reaction, which can be found by seeing the earliest time the calorimeter starts to heat up"},
     {"What is bond enthalpy?", "Bond enthalpy is the energy required to break a mole of bonds at SATP (298 K and 100 kPa) in a gaseous state\nIt also represents the amount of energy released when forming those same bonds (just flip the sign)"},
     {"How can bond enthalpy be used to calculate reaction enthalpy?", "Reaction enthalpy can be calculated by finding the energy required to break all bonds in the reactants and form all bonds in the products"},
-    {"What is Hess's law?", "Hess's law says that enthalpy is a state function\nThat is, regardless of what reactions are used to get from one state to another, the enthalpy of changing the reactants to the products is the same"}
+    {"What is Hess's law?", "Hess's law says that enthalpy is a state function\nThat is, regardless of what reactions are used to get from one state to another, the enthalpy of changing the reactants to the products is the same"},
+    {"What is meant by the standard state of a substance?", "The standard state of a substance is the natural, most stable state of the pure substance at SATP (298 K and 100 kPa) "},
+    {"WHat is entropy?", "Entropy is a measure of how disordered a system is\nThe more disordered a system is, the higher its entropy\nEntropy is measured in J/K"}
 };
 
 void pickCueCard() {
