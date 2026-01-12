@@ -52,3 +52,33 @@ void hess_law() {
     double ans; cin >> ans;
     checkAnswerD(ans, mol_enthalpy);
 }
+
+vector<pair<string, double>> formation_enthalpy_eqs = {
+    {"CH4(g) + 2 O2(g) => CO2(g) + 2 H2O(l)", -606},
+    {"C2H4(g) + H2(g) => C2H6(g)", -136},
+    {"C2H4(g) + H2O(l) => C2H5OH(l)", -44},
+    {"2 CO(g) + O2(g) => 2 CO2(g)", -566},
+    {"C2H5OH(l) + O2(g) => CH3COOH(l) + H2O(l)", -492}
+};
+
+vector<pair<string, double>> combustion_enthalpy_eqs = {
+    {"CH4(g) + 2 O2(g) => CO2(g) + 2 H2O(l)", -606},
+    {"C2H4(g) + H2(g) => C2H6(g)", -136},
+    {"C2H4(g) + H2O(l) => C2H5OH(l)", -44},
+    {"2 CO(g) + O2(g) => 2 CO2(g)", -566},
+    {"C2H5OH(l) + O2(g) => CH3COOH(l) + H2O(l)", -492}
+};
+
+void formation_enthalpy_cycle() {
+    auto [eq, enthalpy] = formation_enthalpy_eqs;
+    cout << "Using Section 13 of the IB Chemistry data booklet, find the molar enthalpy of the following equation:\n" << eq << '\n';
+    double ans; cin >> ans;
+    checkAnswerD(ans, enthalpy);
+}
+
+void combustion_enthalpy_cycle() {
+    auto [eq, enthalpy] = combustion_enthalpy_eqs;
+    cout << "Using Section 14 of the IB Chemistry data booklet, find the molar enthalpy of the following equation:\n" << eq << '\n';
+    double ans; cin >> ans;
+    checkAnswerD(ans, enthalpy);
+}
