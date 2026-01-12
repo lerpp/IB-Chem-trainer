@@ -26,6 +26,7 @@
 #include "includes/heat.h"
 #include "includes/calorimetry.h"
 #include "includes/hess_law.h"
+#include "includes/net_equation_entropy.h"
 
 using std::vector, std::cin, std::cout, std::getline, std::ws, std::string, std::pair;
 
@@ -58,7 +59,8 @@ const vector all_questions = {
     qnct,
     qnl,
     calorimetry,
-    hess_law
+    hess_law,
+    net_entropy
 };
 
 const vector structure1 = {
@@ -95,7 +97,8 @@ const vector reactivity1 = {
     qnct,
     qnl,
     calorimetry,
-    hess_law
+    hess_law,
+    net_entropy
 };
 
 const vector cuecards = {
