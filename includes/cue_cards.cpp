@@ -86,7 +86,9 @@ Nanotubes  Trigonal planar  Hollow tube   Extremely hard Very good)"},
     {"How can bond enthalpy be used to calculate reaction enthalpy?", "Reaction enthalpy can be calculated by finding the energy required to break all bonds in the reactants and form all bonds in the products"},
     {"What is Hess's law?", "Hess's law says that enthalpy is a state function\nThat is, regardless of what reactions are used to get from one state to another, the enthalpy of changing the reactants to the products is the same"},
     {"What is meant by the standard state of a substance?", "The standard state of a substance is the natural, most stable state of the pure substance at SATP (298 K and 100 kPa) "},
-    {"WHat is entropy?", "Entropy is a measure of how disordered a system is\nThe more disordered a system is, the higher its entropy\nEntropy is measured in J/K"}
+    {"What is entropy?", "Entropy is a measure of how disordered a system is\nThe more disordered a system is, the higher its entropy\nEntropy is measured in J/K"},
+    {"What is the definition of spontaneity? What is the difference between exergonic and endergonic reaction?", "Spontaneity refers to how readily a reaction occurs\nExergonic reactions occur with minimal extra energy put in, while endergonic reactions require external work to be put in to react"},
+    {"What is Gibb's free energy?", "Gibb's free energy is a measure of how much useful energy comes out of a reaction (extra energy which could potentially be used to do work)\nIf the value is positive, one must do work to get the reaction to occur\nIf it is negative, you will get extra energy out of the reaction, more than you put into it"}
 };
 
 void pickCueCard() {
