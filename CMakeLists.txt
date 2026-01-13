@@ -55,4 +55,6 @@ add_executable(ib_chem_tool main.cpp
         includes/calorimetry.cpp
         includes/calorimetry.h
         includes/hess_law.cpp
-        includes/hess_law.h)
+        includes/hess_law.h
+        includes/gibbs_free_energy.cpp
+        includes/gibbs_free_energy.h)
