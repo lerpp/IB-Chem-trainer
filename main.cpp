@@ -28,6 +28,7 @@
 #include "includes/hess_law.h"
 #include "includes/net_equation_entropy.h"
 #include "includes/gibbs_free_energy.h"
+#include "includes/born_haber_cycles.h"
 
 using std::vector, std::cin, std::cout, std::getline, std::ws, std::string, std::pair;
 
@@ -62,7 +63,8 @@ const vector all_questions = {
     calorimetry,
     hess_law,
     net_entropy,
-    gibbs_free_energy
+    gibbs_free_energy,
+    bh_cycle
 };
 
 const vector structure1 = {
@@ -101,7 +103,8 @@ const vector reactivity1 = {
     calorimetry,
     hess_law,
     net_entropy,
-    gibbs_free_energy
+    gibbs_free_energy,
+    bh_cycle
 };
 
 const vector cuecards = {
