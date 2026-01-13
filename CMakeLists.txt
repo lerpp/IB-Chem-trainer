@@ -59,4 +59,5 @@ add_executable(ib_chem_tool main.cpp
         includes/gibbs_free_energy.cpp
         includes/gibbs_free_energy.h
         includes/born_haber_cycles.cpp
-        includes/born_haber_cycles.h)
+        includes/born_haber_cycles.h
+        includes/net_equation_entropy.cpp)
