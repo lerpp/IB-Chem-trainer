@@ -88,7 +88,9 @@ Nanotubes  Trigonal planar  Hollow tube   Extremely hard Very good)"},
     {"What is meant by the standard state of a substance?", "The standard state of a substance is the natural, most stable state of the pure substance at SATP (298 K and 100 kPa) "},
     {"What is entropy?", "Entropy is a measure of how disordered a system is\nThe more disordered a system is, the higher its entropy\nEntropy is measured in J/K"},
     {"What is the definition of spontaneity? What is the difference between exergonic and endergonic reaction?", "Spontaneity refers to how readily a reaction occurs\nExergonic reactions occur with minimal extra energy put in, while endergonic reactions require external work to be put in to react"},
-    {"What is Gibb's free energy?", "Gibb's free energy is a measure of how much useful energy comes out of a reaction (extra energy which could potentially be used to do work)\nIf the value is positive, one must do work to get the reaction to occur\nIf it is negative, you will get extra energy out of the reaction, more than you put into it"}
+    {"What is Gibb's free energy?", "Gibb's free energy is a measure of how much useful energy comes out of a reaction (extra energy which could potentially be used to do work)\nIf the value is positive, one must do work to get the reaction to occur\nIf it is negative, you will get extra energy out of the reaction, more than you put into it"},
+    {"What are Born-Haber cycles?", "Born-Haber cycles are an application of Hess's law used to indirectly determine lattice enthalpies of ionic substances"},
+    {"What are the cycle steps in a Born-Haber cycle?", "Apart from the one step formation enthalpy of the substance, the steps are:\n1. Atomize the metal and non-metal (enthalpy of vaporization / bond enthalpy)\n2. Ionize the metal (ionization energy)\n3. Ionize the non-metal (electron affinity energy)\n4. Allow the ions to bond together (lattice enthalpy)"}
 };
 
 void pickCueCard() {
