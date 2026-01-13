@@ -70,14 +70,14 @@ vector<pair<string, double>> combustion_enthalpy_eqs = {
 };
 
 void formation_enthalpy_cycle() {
-    auto [eq, enthalpy] = formation_enthalpy_eqs;
+    auto [eq, enthalpy] = formation_enthalpy_eqs[rand() % formation_enthalpy_eqs.size()];
     cout << "Using Section 13 of the IB Chemistry data booklet, find the molar enthalpy of the following equation:\n" << eq << '\n';
     double ans; cin >> ans;
     checkAnswerD(ans, enthalpy);
 }
 
 void combustion_enthalpy_cycle() {
-    auto [eq, enthalpy] = combustion_enthalpy_eqs;
+    auto [eq, enthalpy] = combustion_enthalpy_eqs[rand() % combustion_enthalpy_eqs.size()];
     cout << "Using Section 14 of the IB Chemistry data booklet, find the molar enthalpy of the following equation:\n" << eq << '\n';
     double ans; cin >> ans;
     checkAnswerD(ans, enthalpy);
