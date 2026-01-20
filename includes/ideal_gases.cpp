@@ -59,12 +59,12 @@ void ideal_gas_law() {
         checkAnswerD(ans, t);
     }
     else if (whichone == 1) {
-        cout << n << " moles of an ideal gas is stored at " << p << " kPa and " << t << " dm^3\nFind the volume of the gas in dm^3\n";
+        cout << n << " moles of an ideal gas is stored at " << p << " kPa and " << t << " K\nFind the volume of the gas in dm^3\n";
         double ans; cin >> ans;
         checkAnswerD(ans, v);
     }
     else if (whichone == 2) {
-        cout << n << " moles of an ideal gas is stored at " << v << " kPa and " << t << " dm^3\nFind the pressure of the gas\n";
+        cout << n << " moles of an ideal gas is stored at " << t << " K and " << v << " dm^3\nFind the pressure of the gas\n";
         double ans; cin >> ans;
         checkAnswerD(ans, p);
     }
