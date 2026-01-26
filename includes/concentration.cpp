@@ -41,7 +41,7 @@ void cvcv() {
         checkAnswerD(ans, c2);
     }
     else if (whichone == 1) {
-        cout << "A " << v1 << " cm^3 solution of salt water with concentration " << c1 << " mol/c^3 is " << growth << " to a concentration of " << c2 << " mol/cm^3\nFind the volume of the final solution\n";
+        cout << "A " << v1 << " cm^3 solution of salt water with concentration " << c1 << " mol/cm^3 is " << growth << " to a concentration of " << c2 << " mol/cm^3\nFind the volume of the final solution\n";
         double ans; cin >> ans;
         checkAnswerD(ans, v2);
     }
