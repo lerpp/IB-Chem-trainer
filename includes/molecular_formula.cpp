@@ -98,7 +98,7 @@ void mol_formula() {
         for (const auto &[element, percent] : composition) {
                 cout << element << ": " << percent * scalar << "g\n";
         }
-        cout << "The compound has molar mass " << mol_m << "\nFind the empirical formula of the compound\n";
+        cout << "The compound has molar mass " << mol_m << "\nFind the molecular formula of the compound\n";
         string ans; cin >> ans;
         checkAnswerS(ans, formula);
 }
